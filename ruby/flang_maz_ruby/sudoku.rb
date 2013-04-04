@@ -4,7 +4,7 @@ module Sudoku
 	class Puzzle
 
 		ASCII = ".123456789"
-		BIN = "00\001\002\003\004\005\006\007\010\011"
+		BIN = "\000\001\002\003\004\005\006\007\010\011"
 
 		def initialize(lines)
 			
@@ -130,7 +130,7 @@ module Sudoku
 				min = 10
 
 				puzzle.each_unknown do |row,col,box|
-					p = puzzle.posible(row, col, box)
+					p = puzzle.possible(row, col, box)
 
 					case p.size
 					when 0
